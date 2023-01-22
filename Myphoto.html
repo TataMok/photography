@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyphotosNataliaMokijevski</title>
+
+    <style>
+        body {
+
+            background: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgb(91, 90, 91);
+            background: rgb(139, 128, 114);
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            background: white;
+            cursor: pointer;
+
+
+        }
+
+        footer {
+            text-align: center;
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .theme-button {
+            font-size: 10px;
+            background: black;
+            color: white;
+            padding: 5 8px;
+        }
+
+        .theme-button:hover {
+            color: black;
+            background: white;
+        }
+
+        .travel-photo {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .travel-photo:hover {
+            opacity: 0, 7;
+            transform: scale(1.9);
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+        }
+
+        .dark {
+            background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+            color: aliceblue;
+        }
+
+        .dark .container {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark a {
+            color: rgb(91, 90, 91);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-button">change theme</button>
+    <div class="container">
+        <h1>Photography</h1>
+        <h2>My favorite hobby</h2>
+
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/669/original/20210402_175354.jpg?1674219923"
+            alt="" class="travel-photo" />
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/814/original/20210410_134707.jpg?1674309646"
+                alt="" class="travel-photo" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/813/original/20210331_183714.jpg?1674309627"
+                alt="" class="travel-photo" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/668/original/20210328_170553.jpg?1674219914"
+                alt="" class="travel-photo" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/811/original/20210328_165929.jpg?1674309604"
+                alt="" class="travel-photo" />
+        </div>
+        <p>
+            Travel photography is a genre of photography that may involve the documentation of an area's landscape,
+            people,
+            cultures, customs, and history. The Photographic Society of America defines a travel photo as an image that
+            expresses
+            the feeling of a time and place, portrays a land, its people, or a culture in its natural state, and has no
+            geographical
+            limitations.
+        </p>
+
+        <button>more on <a href="https://www.instagram.com/natal.mo/" target="_blank">inst</a></button>
+    </div>
+    <footer>coded by
+        <a href="https://www.linkedin.com/in/natalia-mokijevski-b862321a1/" target="_blank">Natalia Mokijevski</a>
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            // body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+
+            } else {
+                body.classList.add("dark");
+            }
+
+
+        }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+
+
+</body>
+
+</html>
